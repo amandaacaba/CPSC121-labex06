@@ -1,4 +1,5 @@
 #include <iostream>
+#include "time.hpp"
 
 int main() {
   unsigned short int mil_time = 0;
@@ -7,7 +8,7 @@ int main() {
 
   // Call your function to convert from military time to regular time
   // and assign it's result to reg_time
-  std::string reg_time;
+  std::string reg_time = mil_to_reg(mil_time);
 
   std::cout << "The equivalent regular time is: " << reg_time << "\n";
   return 0;

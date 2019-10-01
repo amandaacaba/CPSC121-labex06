@@ -1,0 +1,49 @@
+---
+MainSourceFile:  '/home/student/labex06-amandaacaba/prob01/time.cpp'
+Diagnostics:     
+  - DiagnosticName:  llvm-include-order
+    Message:         '#includes are not sorted properly'
+    FileOffset:      0
+    FilePath:        main.cpp
+    Replacements:    
+      - FilePath:        main.cpp
+        Offset:          9
+        Length:          10
+        ReplacementText: '"time.hpp"'
+      - FilePath:        main.cpp
+        Offset:          29
+        Length:          10
+        ReplacementText: '<iostream>'
+  - DiagnosticName:  llvm-include-order
+    Message:         '#includes are not sorted properly'
+    FileOffset:      0
+    FilePath:        time.cpp
+    Replacements:    
+      - FilePath:        time.cpp
+        Offset:          9
+        Length:          10
+        ReplacementText: '"time.hpp"'
+      - FilePath:        time.cpp
+        Offset:          29
+        Length:          8
+        ReplacementText: '<iostream>'
+      - FilePath:        time.cpp
+        Offset:          47
+        Length:          10
+        ReplacementText: '<string>'
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    Message:         '12 is a magic number; consider replacing it with a named constant'
+    FileOffset:      390
+    FilePath:        time.cpp
+    Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    Message:         '12 is a magic number; consider replacing it with a named constant'
+    FileOffset:      424
+    FilePath:        time.cpp
+    Replacements:    []
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'use of undeclared identifier ''std'''
+    FileOffset:      0
+    FilePath:        time.hpp
+    Replacements:    []
+...
