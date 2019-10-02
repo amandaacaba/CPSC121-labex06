@@ -1,0 +1,119 @@
+---
+MainSourceFile:  '/home/student/labex06-amandaacaba/prob02/header.cpp'
+Diagnostics:     
+  - DiagnosticName:  llvm-include-order
+    Message:         '#includes are not sorted properly'
+    FileOffset:      0
+    FilePath:        header.cpp
+    Replacements:    
+      - FilePath:        header.cpp
+        Offset:          9
+        Length:          10
+        ReplacementText: '"header.hpp"'
+      - FilePath:        header.cpp
+        Offset:          29
+        Length:          8
+        ReplacementText: '<iostream>'
+      - FilePath:        header.cpp
+        Offset:          47
+        Length:          12
+        ReplacementText: '<string>'
+  - DiagnosticName:  performance-unnecessary-value-param
+    Message:         'the parameter ''header'' is copied for each invocation but only used as a const reference; consider making it a const reference'
+    FileOffset:      93
+    FilePath:        header.cpp
+    Replacements:    
+      - FilePath:        header.cpp
+        Offset:          81
+        Length:          0
+        ReplacementText: 'const '
+      - FilePath:        header.cpp
+        Offset:          92
+        Length:          0
+        ReplacementText: '&'
+      - FilePath:        './header.hpp'
+        Offset:          20
+        Length:          0
+        ReplacementText: 'const '
+      - FilePath:        './header.hpp'
+        Offset:          31
+        Length:          0
+        ReplacementText: '&'
+  - DiagnosticName:  bugprone-too-small-loop-variable
+    Message:         'loop variable has narrower type ''int'' than iteration''s upper bound ''unsigned long'''
+    FileOffset:      122
+    FilePath:        header.cpp
+    Replacements:    []
+  - DiagnosticName:  bugprone-too-small-loop-variable
+    Message:         'loop variable has narrower type ''int'' than iteration''s upper bound ''unsigned long'''
+    FileOffset:      259
+    FilePath:        header.cpp
+    Replacements:    []
+  - DiagnosticName:  performance-unnecessary-value-param
+    Message:         'the parameter ''header'' is copied for each invocation but only used as a const reference; consider making it a const reference'
+    FileOffset:      377
+    FilePath:        header.cpp
+    Replacements:    
+      - FilePath:        header.cpp
+        Offset:          365
+        Length:          0
+        ReplacementText: 'const '
+      - FilePath:        header.cpp
+        Offset:          376
+        Length:          0
+        ReplacementText: '&'
+      - FilePath:        './header.hpp'
+        Offset:          59
+        Length:          0
+        ReplacementText: 'const '
+      - FilePath:        './header.hpp'
+        Offset:          70
+        Length:          0
+        ReplacementText: '&'
+  - DiagnosticName:  readability-simplify-boolean-expr
+    Message:         redundant boolean literal in conditional return statement
+    FileOffset:      465
+    FilePath:        header.cpp
+    Replacements:    
+      - FilePath:        header.cpp
+        Offset:          416
+        Length:          89
+        ReplacementText: 'return (header.length() + 4) <= width;'
+  - DiagnosticName:  readability-else-after-return
+    Message:         'do not use ''else'' after ''return'''
+    FileOffset:      477
+    FilePath:        header.cpp
+    Notes:           
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+    Replacements:    []
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'use of undeclared identifier ''std'''
+    FileOffset:      20
+    FilePath:        header.hpp
+    Replacements:    []
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'use of undeclared identifier ''std'''
+    FileOffset:      59
+    FilePath:        header.hpp
+    Replacements:    []
+  - DiagnosticName:  llvm-include-order
+    Message:         '#includes are not sorted properly'
+    FileOffset:      0
+    FilePath:        main.cpp
+    Replacements:    
+      - FilePath:        main.cpp
+        Offset:          9
+        Length:          10
+        ReplacementText: '"header.hpp"'
+      - FilePath:        main.cpp
+        Offset:          29
+        Length:          12
+        ReplacementText: '<iostream>'
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    Message:         '80 is a magic number; consider replacing it with a named constant'
+    FileOffset:      179
+    FilePath:        main.cpp
+    Replacements:    []
+...
